@@ -1,0 +1,201 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.main {
+	width: 100%;
+	height: 750px;
+	padding: 0;
+}
+
+.cover-pg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(splash_photo.jpg); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	color: white;
+}
+
+	.cover-pg:before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(256, 256, 256, 0.1), rgba(0,0,0,0.8));
+	}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 84px;
+	padding: 10px 0 0 0;
+	color: white;
+	z-index: 10;
+	font-weight: 300;
+}
+
+	header .early-access-btn {
+		width: 150px;
+		height: 40px;
+		font-size: 16px;
+		background: transparent;
+		border: 2px solid white;
+	}
+
+.early-access-btn {
+	margin: 10px 0 0 0;
+	font-size: 18px;
+	background-color: rgb(219, 68, 55);
+	border: 0;
+	border-radius: 5px;
+}
+
+/* Styling for the cover page */
+.comp-name-container {
+	position: relative;
+	top: 150px;
+	text-align: center;
+	font-size:28px;
+	font-weight: 400;
+}
+	.comp-name-container .heading {
+		font-size: 54px;
+		font-weight: 700;
+	}
+
+.early-access-input-container {
+	position: relative;
+	top: 200px;
+}
+	
+	.early-access-input-container .early-access-btn {
+		width: 200px;
+		height: 50px;
+	}
+
+	.early-access-input-container input {
+		width: 400px;
+		height: 50px;
+		padding: 20px;
+		font-size: 24px;
+		font-weight: 300;
+	}
+
+.early-access-link {
+	border: 2px white;
+}
+
+/* Styling for the general information page */
+.general-info-pg {
+	position: relative;
+	background-color: white;
+	width: 100%;
+	height: 750px;
+	margin: 0;
+}
+
+.heading-container {
+	position: relative;
+	text-align: center;
+	margin-top: 100px;
+}
+	.heading-container .heading {
+		font-weight: 700;
+		font-size: 44px;
+	}
+
+.gifts-icon-container {
+	position: relative;
+	top: 50px;
+	text-align: center;
+}
+
+	.gifts-icon-container img {
+		width: 200px;
+	}
+
+.general-info-content {
+	position: relative;
+	top: 100px;
+	text-align: center;
+	font-size: 19px;
+	font-weight: 400;
+}
+
+/* Styling for the locations available section */
+.available-locations-container {
+	position: relative;
+	background:url(skyline1.png);
+	background-color: rgb(150, 40, 27);
+	width: 100%;
+	height: 340px;
+	margin: 0;
+}
+
+.coming-soon-container {
+	position: relative;
+	top: 50px;
+	font-size: 34px;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+}
+
+/* Styling for how it works section */
+.how-it-works-pg {
+	width: 100%;
+	height: 750px;
+}
+
+.hiw-elmts {
+	position: relative;
+	top: 100px;
+	text-align: center;
+}
+	.hiw-elmts .heading {
+		font-weight: 400;
+		font-size: 24px;
+	}
+
+	.hiw-elmts .content {
+		font-weight: 300;
+		font-size: 19px;
+	}
+
+.hiw-img {
+	width: 100px;
+	margin-bottom: 20px;
+}
+
+/* Styling for the footer page */
+.footer-pg {
+	position: relative;
+	background: url(passport2.png);
+	width: 100%;
+	height: 400px;
+	margin: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+	
+	.closing-stmt {
+		position: absolute;
+		bottom: 140px;
+		font-size: 54px;
+		text-align: center;
+		color: white;
+		font-weight: 700;
+	}
+
+	.footer-pg:before {
+		position: relative;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: rgba(237, 157, 151, 0.3);
+	}
