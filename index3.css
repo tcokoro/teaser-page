@@ -1,24 +1,80 @@
+/*----------------------------------------*\
+
+	Entire page Styling
+
+\*----------------------------------------*/
+
 html, body {
 	height: 100%;
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
 }
 
-.main {
-	width: 100%;
+.pg {
 	height: 750px;
+}
+
+.full-width {
+	width: 100%;
+	margin: 0;
 	padding: 0;
 }
 
+.cover-bg {
+	background-repeat: no-repeat;
+}
+
+.font-light {
+	font-weight: 300;
+}
+
+.font-reg{
+	font-weight: 400;
+}
+
+.font-bold {
+	font-weight: 700;
+}
+
+.font-x-lg {
+	font-size: 54px;
+}
+
+.font-lg {
+	font-size: 34px;
+}
+
+.font-md {
+	font-size: 24px;
+}
+
+.font-sm {
+	font-size: 19px;
+}
+
+.font-x-sm {
+	font-size: 12px;
+}
+
+.centered-content {
+	text-align: center;
+}
+
+.wt-text {
+	color: white;
+}
+
+/*---------------------------------------------*\
+
+     Cover Page Styling
+
+\*---------------------------------------------*/
+
 .cover-pg {
 	position: relative;
-	width: 100%;
 	height: 100%;
 	background: url(splash_photo.jpg); 
-	background-repeat: no-repeat;
 	background-size: cover;
-	margin: 0;
-	color: white;
 }
 
 	.cover-pg:before {
@@ -31,42 +87,41 @@ html, body {
 
 header {
 	position: fixed;
-	width: 100%;
 	height: 84px;
 	padding: 10px 0 0 0;
-	color: white;
 	z-index: 10;
-	font-weight: 300;
+	color: white;
 }
 
 	header .early-access-btn {
 		width: 150px;
 		height: 40px;
-		font-size: 16px;
 		background: transparent;
 		border: 2px solid white;
 	}
 
+.scrolled-header {
+	background-color: white;
+	color: black;
+	border-bottom: 2px solid rgb(230, 230, 230);
+}
+
+	.scrolled-header .early-access-btn {
+		background-color: rgb(219, 68, 55);
+		border: 0;
+	}
+
 .early-access-btn {
 	margin: 10px 0 0 0;
-	font-size: 18px;
 	background-color: rgb(219, 68, 55);
 	border: 0;
 	border-radius: 5px;
 }
 
-/* Styling for the cover page */
 .comp-name-container {
 	position: relative;
 	top: 150px;
-	text-align: center;
-	font-size:28px;
-	font-weight: 400;
 }
-	.comp-name-container .heading {
-		font-size: 54px;
-		font-weight: 700;
-	}
 
 .early-access-input-container {
 	position: relative;
@@ -82,37 +137,31 @@ header {
 		width: 400px;
 		height: 50px;
 		padding: 20px;
-		font-size: 24px;
-		font-weight: 300;
 	}
 
 .early-access-link {
 	border: 2px white;
 }
 
-/* Styling for the general information page */
+/*---------------------------------------------*\
+
+     General Information Page Styling
+
+\*---------------------------------------------*/
+
 .general-info-pg {
 	position: relative;
 	background-color: white;
-	width: 100%;
-	height: 750px;
-	margin: 0;
 }
 
 .heading-container {
 	position: relative;
-	text-align: center;
 	margin-top: 100px;
 }
-	.heading-container .heading {
-		font-weight: 700;
-		font-size: 44px;
-	}
 
 .gifts-icon-container {
 	position: relative;
 	top: 50px;
-	text-align: center;
 }
 
 	.gifts-icon-container img {
@@ -122,74 +171,54 @@ header {
 .general-info-content {
 	position: relative;
 	top: 100px;
-	text-align: center;
-	font-size: 19px;
-	font-weight: 400;
+	text-align: left;
 }
 
-/* Styling for the locations available section */
+/*----------------------------------------------*\
+
+     #Available-Locations
+
+\*-----------------------------------------------*/
+
 .available-locations-container {
 	position: relative;
 	background:url(skyline1.png);
 	background-color: rgb(150, 40, 27);
-	width: 100%;
 	height: 340px;
-	margin: 0;
 }
 
 .coming-soon-container {
 	position: relative;
 	top: 50px;
-	font-size: 34px;
-	font-weight: 700;
-	color: white;
-	text-align: center;
 }
 
 /* Styling for how it works section */
-.how-it-works-pg {
-	width: 100%;
-	height: 750px;
-}
-
 .hiw-elmts {
 	position: relative;
 	top: 100px;
-	text-align: center;
 }
-	.hiw-elmts .heading {
-		font-weight: 400;
-		font-size: 24px;
-	}
-
-	.hiw-elmts .content {
-		font-weight: 300;
-		font-size: 19px;
-	}
 
 .hiw-img {
 	width: 100px;
 	margin-bottom: 20px;
 }
 
-/* Styling for the footer page */
+
+/*----------------------------------------*\
+
+     Footer Page Styling
+
+\*----------------------------------------*/
+
 .footer-pg {
 	position: relative;
 	background: url(passport2.png);
-	width: 100%;
 	height: 400px;
-	margin: 0;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 	
 	.closing-stmt {
 		position: absolute;
 		bottom: 140px;
-		font-size: 54px;
-		text-align: center;
-		color: white;
-		font-weight: 700;
 	}
 
 	.footer-pg:before {
