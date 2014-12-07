@@ -73,9 +73,32 @@ html, body {
 .cover-pg {
 	position: relative;
 	height: 100%;
-	background: url("images/splash_photo.jpg"); 
 	background-size: cover;
+	background-position: 50% 50%;
 }
+
+@media only screen and (max-width: 399px) {
+	/* small sized screen, non retina */
+	.cover-pg {
+		background-image:url("images/splash_photo_290.jpg");
+	}
+}
+
+
+@media only screen and (min-width: 400px) and (max-width:1279px) {
+	/* large sized screen, non retina */
+	.cover-pg {
+		background-image:url("images/splash_photo_600.jpg");
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	/* default */
+	.cover-pg {
+		background-image: url("images/splash_photo_1280.jpg");
+	}
+}
+
 
 	.cover-pg:before {
 		position: absolute;
