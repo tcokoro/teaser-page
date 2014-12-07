@@ -79,16 +79,8 @@ html, body {
 	background-position: 50% 50%;
 }
 
-@media only screen and (max-width: 399px) {
-	/* small sized screen, non retina */
-	.cover-pg {
-		background-image:url("images/splash_photo_290.jpg");
-	}
-}
-
-
-@media only screen and (min-width: 400px) and (max-width:1279px) {
-	/* large sized screen, non retina */
+@media only screen and (max-width:1279px) {
+	/* medium sized screen, non retina */
 	.cover-pg {
 		background-image:url("images/splash_photo_600.jpg");
 	}
