@@ -18,10 +18,12 @@ html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	border:0;
 }
 
 .cover-bg {
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .font-light {
@@ -253,7 +255,7 @@ header {
 
 .footer-pg {
 	position: relative;
-	background: url("images/passport2.png");
+	background-image: url("images/passport2.png");
 	height: 400px;
 }
 	
