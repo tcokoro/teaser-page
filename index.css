@@ -145,16 +145,17 @@ header {
 	top: 200px;
 }
 	
-	.early-access-input-container .early-access-btn {
+	.early-access-btn {
 		width: 250px;
 		height: 50px;
 	}
 
-	.early-access-input-container input {
+	.early-access-input {
 		width: 50%;
 		min-width: 250px;
 		height: 50px;
 		padding: 20px;
+		border-radius: 5px;
 	}
 
 .early-access-link {
@@ -263,3 +264,39 @@ header {
 		height: 100%;
 		background-color: rgba(237, 157, 151, 0.3);
 	}
+
+/*---------------------------------------*\
+
+     Get Early Access Modal Styling
+
+\*---------------------------------------*/
+
+.sub-modal-container {
+	height: 100px;
+	text-align: center;
+}
+
+	.sub-modal-content {
+		margin-top: 25px;
+	}
+
+	@media only screen and (max-width: 560px) {
+		.early-access-input {
+			width: 90%;
+		}
+
+		.sub-modal-container {
+			height: 150px;
+		}
+	}
+
+.sub-modal-container span{
+	position: absolute;
+	color: rgb(204, 204, 204);
+	left: 95%;
+	top: 10%;
+}
+
+	.sub-modal-container span:hover {
+		color: rgb(153, 153, 153);
+	};

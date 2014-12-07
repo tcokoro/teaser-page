@@ -13,4 +13,9 @@ $(document).ready(function(){
 		console.log('available locations: ', $(".available-locations-container").scrollTop());
 	});
 
+
+	$("#subscribeModal").on('shown.bs.modal', function(){
+		$("#modalInput").focus();
+	});
+
 });

@@ -15,6 +15,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>	
 </head>
 <body>
+
+	
+	<!--- Cover Page -->
 	<div class="container-fluid pg full-width">
 		<div class="row cover-pg cover-bg full-width">
 			<div class="col-md-12 full-width">
@@ -23,7 +26,7 @@
 						<h3>Logo</h3>
 					</div>
 					<div class="col-xs-3 col-md-3 col-xs-offset-3 col-sm-offset-5 col-md-offset-6">
-						<button type="button" class="early-access-btn wt-text"> Get Early Access</button>
+						<button id="subscribeModalBtn" type="button" data-toggle="modal" data-target="#subscribeModal" class="early-access-btn wt-text"> Get Early Access</button>
 					</div>
 				</header>
 				<div class="row">
@@ -34,7 +37,7 @@
 						</div>
 						<div class="row early-access-input-container">
 							<div class="col-xs-12 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
-								<input placeholder="Enter your username"></input>	
+								<input class="early-access-input" placeholder="Enter your username"></input>	
 								<button type="button" class="early-access-btn wt-text">Get Early Access</button>
 							</div>
 						</div>
@@ -116,7 +119,26 @@
 				<footer class="row"></footer>
 			</div>
 		</div>
-
 	</div>
+
+	<!--- Subcribe Modal --> 
+	<div id="subscribeModal" class="modal fade" tabIndex="-1" role="dialog" >
+		<div class="modal-dialog modal-lg">
+			<div class="container-fluid modal-content sub-modal-container">
+				
+					<a href="#"><span data-dismiss="modal">&times;</span></a>
+				
+				<div class="row">
+					<div class="sub-modal-content col-md-8 col-md-offset-2">
+							<input id="modalInput" class="early-access-input" placeholder="Enter your email"></input>
+							<button type="button" class="early-access-btn wt-text">Get Early Access</button>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
