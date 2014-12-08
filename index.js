@@ -4,18 +4,18 @@ $(document).ready(function(){
 	$(window).scroll(function(e){
 		if ($(window).scrollTop() < 20 ){
 			$("header").removeClass('scrolled-header');
+			$("#subscribeModalMenu img").attr("src", "images/early_access_menu_wt.png");
 		} else {	
 			$("header").addClass('scrolled-header');
+			$("#subscribeModalMenu img").attr("src", "images/early_access_menu_blk.png");
 		}
-		
-		// Handle Parallax Scrolling
-		console.log('general info: ', $(".general-info-pg").scrollTop());
-		console.log('available locations: ', $(".available-locations-container").scrollTop());
 	});
 
 
 	$("#subscribeModal").on('shown.bs.modal', function(){
 		$("#modalInput").focus();
 	});
+
+
 
 });

@@ -22,11 +22,13 @@
 		<div class="row cover-pg cover-bg full-width">
 			<div class="col-md-12 full-width">
 				<header class="row full-width">
-					<div class="col-xs-2 col-md-2 col-xs-offset-1 col-md-offset-1">
+					<div class="col-xs-2 col-md-2 col-md-offset-1">
 						<h3 class="logo-container"><img src="images/logo_icon.png"/><h3>
 					</div>
-					<div class="col-xs-3 col-md-3 col-xs-offset-3 col-sm-offset-5 col-md-offset-6">
+					<div class="col-xs-2 col-md-3 col-xs-offset-8 col-sm-offset-5 col-md-offset-6">
 						<button id="subscribeModalBtn" type="button" data-toggle="modal" data-target="#subscribeModal" class="early-access-btn wt-text font-x-sm font-light"> Get Early Access</button>
+						<!-- will apply when the screen width <= 768px -->
+						<a href="" id="subscribeModalMenu" data-toggle="modal" data-target="#subscribeModal" class="early-access-menu"><img src="images/early_access_menu_wt.png"/></a>
 					</div>
 				</header>
 				<div class="row">
@@ -39,6 +41,7 @@
 							<div class="col-xs-12 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
 								<input class="early-access-input font-sm font-light" placeholder="Enter your username" ></input>	
 								<button type="button" class="early-access-btn wt-text font-sm font-light">Get Early Access</button>
+
 							</div>
 						</div>
 					</div>
@@ -128,7 +131,7 @@
 		<div class="modal-dialog modal-lg">
 			<div class="container-fluid modal-content sub-modal-container">
 				
-					<a href="#"><span data-dismiss="modal">&times;</span></a>
+					<a href="#"><span data-dismiss="modal" class="font-sm">&times;</span></a>
 				
 				<div class="row">
 					<div class="sub-modal-content col-md-8 col-md-offset-2">
