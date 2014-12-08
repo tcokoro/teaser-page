@@ -7,7 +7,10 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	font: normal 100% 'Roboto', sans-serif;
 }
 
 .pg {
@@ -40,10 +43,11 @@ html, body {
 
 .font-x-lg {
 	font-size: 54px;
+	
 }
 
 .font-lg {
-	font-size: 34px;
+	font-size: 30px;
 }
 
 .font-md {
@@ -55,15 +59,44 @@ html, body {
 }
 
 .font-x-sm {
-	font-size: 12px;
+	font-size: 14px;
 }
 
+@media only screen and (max-width: 768px) {
+	.font-x-lg {
+		font-size: 42px;
+	}
+
+	.font-lg {
+		font-size: 24px;
+	}
+
+	.font-md {
+		font-size: 18px;
+	}
+
+	.font-sm {
+		font-size: 14px;
+	}
+
+	.font-x-sm {
+		font-size: 10px;
+	}
+}
+
+.font-soft {
+	color: rgb(128,128,128);
+}
 .centered-content {
 	text-align: center;
 }
 
 .wt-text {
 	color: white;
+}
+
+.pg-heading {
+	color: rgb(219, 68, 55);
 }
 
 /*---------------------------------------------*\
@@ -99,13 +132,12 @@ html, body {
 		content: "";
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(rgba(256, 256, 256, 0.1), rgba(0,0,0,0.8));
+		background-color: rgba(0,0,0,0.4);
 	}
 
 header {
 	position: fixed;
 	height: 84px;
-	padding: 10px 0 0 0;
 	z-index: 10;
 	color: white;
 }
@@ -115,12 +147,25 @@ header {
 		height: 40px;
 		background: transparent;
 		border: 2px solid white;
+		margin-top: 22px
 	}
+
+	.logo-container {
+		height: 40px;
+		margin-top: 22px;
+	}
+		.logo-container img {
+			transform: rotate(-30deg);
+				-ms-transform: rotate(-30deg);
+				-webkit-transform: rotate(-30deg);
+			width: 50px;
+		}
 
 .scrolled-header {
 	background-color: white;
 	color: black;
 	border-bottom: 2px solid rgb(230, 230, 230);
+	box-shadow: 0 0 12px 3px rgba(0,0,0,0.45);
 }
 
 	.scrolled-header .early-access-btn {
@@ -190,8 +235,13 @@ header {
 .general-info-content {
 	position: relative;
 	top: 100px;
-	text-align: left;
+	text-align: center;
 }
+
+	.general-info-content span {
+		display: inline-block;
+		max-width: 900px;
+	}
 
 /*----------------------------------------------*\
 
@@ -217,15 +267,9 @@ header {
 
 \*-------------------------------------------*/
 
-@media only screen and (max-width: 495px) {
+@media only screen and (max-width: 995px) {
 	.hiw {
-		height: 1200px;
-	}
-}
-
-@media only screen and (min-width: 496px) and (max-width: 995px) {
-	.hiw {
-		height: 1000px;
+		height: 900px;
 	}
 }
 
