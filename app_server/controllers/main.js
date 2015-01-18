@@ -3,7 +3,7 @@ var api_key = 'key-93363c6d8b608d0bca9a5369084e2f13';
 var domain = 'shypmate.com';
 var from_who = 'info@shypmate.com';
 
-exports.submit = function(req, res){
+module.exports.submit = function(req, res){
 	var mailgun = new Mailgun({apiKey:api_key, domain:domain});	
 	var data  = {
 		from:from_who, 
@@ -20,13 +20,33 @@ exports.submit = function(req, res){
 			console.log('got an error:',err);
 		} else {
 			res.render('submitted', {email:req.params.mail});
+			addToMailingList('awesome@shypmate.com', req.params.mail);
 			console.log(body);
 		}
 	});
 };
 
+function addToMailingList(listName, email) {
+		var mailgun = new Mailgun({apiKey: api_key, domain: domain});
+    var members = [
+      {
+        address: email 
+      }
+    ];
+
+    mailgun.lists(listName).members().add({ members: members, subscribed: true }, function (err, body) {
+      console.log(body);
+      if (err) {
+						return "Error - check console.";
+      }
+      else {
+				return "Added to mailing list";
+      }
+    });
+}
+
 /* GET home page */
-exports.index = function(req, res){
+module.exports.index = function(req, res){
     res.render('index', {title:'Shypmate'});
 };
 

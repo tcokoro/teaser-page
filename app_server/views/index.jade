@@ -14,15 +14,15 @@ block content
 						// will apply when the screen width <= 768px
 						a#subscribeModalMenu.early-access-menu(href='', data-toggle='modal', data-target='#subscribeModal')
 							img(src='/images/early_access_menu_wt.png')
-				.row
-					.col-xs-10.col-md-10.col-xs-offset-1.col-md-offset-1.centered-content
-						.row.comp-name-container
-							p.font-x-lg.font-reg.wt-text SHYPMATE
-							span.font-lg.font-light.wt-text	Ship at a bargain through your network
-						.row.early-access-input-container
-							.col-xs-12.col-sm-10.col-md-10.col-sm-offset-1.col-md-offset-1
-								input.early-access-input.font-sm.font-light(id="mail" placeholder='Enter email address')
-								button.early-access-btn.wt-text.font-sm.font-light(type='button') Get Early Access
+				.col-xs-10.col-md-10.col-xs-offset-1.col-md-offset-1.centered-content
+					.row.comp-name-container
+						p.font-x-lg.font-reg.wt-text SHYPMATE
+						span.font-lg.font-light.wt-text	Ship at a bargain through your network
+					.row.early-access-input-container
+						.col-xs-12.col-sm-10.col-md-10.col-sm-offset-1.col-md-offset-1
+							input.early-access-input.font-sm.font-light(id="mail" placeholder='Enter email address')
+							button#subscribe-button.early-access-btn.wt-text.font-sm.font-light(type='button') Get Early Access
+							p#subscribe-info.bg-primary.blue-error.font-lg.font-light.wt-text.hidden Oops, it looks like you forgot to enter your email address
 
 		// Second Page
 		.row.general-info-pg.pg.full-width
@@ -97,5 +97,6 @@ block content
 					.row
 						.sub-modal-content.col-md-8.col-md-offset-2
 							input#modalInput.early-access-input.font-light.font-sm(placeholder='Enter email address')
-							button.early-access-btn.wt-text.font-light.font-sm(type='button') Get Early Access
+							button#modal-subscribe-button.early-access-btn.wt-text.font-light.font-sm(type='button') Get Early Access
+							p#modal-subscribe-info.bg-primary.blue-error.font-lg.font-light.wt-text.hidden Oops, it looks like you forgot to enter your email address
 

@@ -99,6 +99,13 @@ body {
 	color: rgb(219, 68, 55);
 }
 
+.blue-error {
+	max-width:780px;
+	margin: 20px auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
 /*---------------------------------------------*\
 
      Cover Page Styling
@@ -349,7 +356,7 @@ header {
 \*---------------------------------------*/
 
 .sub-modal-container {
-	height: 100px;
+	height: 120px;
 	text-align: center;
 }
 
