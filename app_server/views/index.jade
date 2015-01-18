@@ -1,0 +1,101 @@
+extends layout
+
+block content
+	// - Cover Page
+	.container-fluid.pg.full-width
+		.row.cover-pg.cover-bg.full-width
+			.col-md-12.full-width
+				header.row.full-width
+					.col-xs-2.col-md-2.col-md-offset-1
+						h3.logo-container
+							img(src='/images/logo_icon.png')
+					.col-xs-2.col-md-3.col-xs-offset-8.col-sm-offset-5.col-md-offset-6
+						button#subscribeModalBtn.early-access-btn.wt-text.font-x-sm.font-light(type='button', data-toggle='modal', data-target='#subscribeModal')	Get Early Access
+						// will apply when the screen width <= 768px
+						a#subscribeModalMenu.early-access-menu(href='', data-toggle='modal', data-target='#subscribeModal')
+							img(src='/images/early_access_menu_wt.png')
+				.row
+					.col-xs-10.col-md-10.col-xs-offset-1.col-md-offset-1.centered-content
+						.row.comp-name-container
+							p.font-x-lg.font-reg.wt-text SHYPMATE
+							span.font-lg.font-light.wt-text	Ship at a bargain through your network
+						.row.early-access-input-container
+							.col-xs-12.col-sm-10.col-md-10.col-sm-offset-1.col-md-offset-1
+								input.early-access-input.font-sm.font-light(id="mail" placeholder='Enter email address')
+								button.early-access-btn.wt-text.font-sm.font-light(type='button') Get Early Access
+
+		// Second Page
+		.row.general-info-pg.pg.full-width
+			.col-md-12.centered-content
+				.row
+					.heading-container.col-md-10.col-md-offset-1
+						p.font-reg.font-lg.pg-heading Ship home to Anyone. Anytime. Anywhere 
+				.row
+					.col-md-10.col-md-offset-1.gifts-icon-container
+						img(src='/images/gifts.png')
+				.row
+					.col-md-10.col-md-offset-1.general-info-content.font-light.font-sm.font-soft
+						span
+							ShypMate allows you to send your packages to loved ones around the globe. 
+							Send your items without the standard cost of shipping internationally and the 
+							ability to ship to rural locations that popular, conventional shipping methods do 
+							not service. If people travel there, ShypMate can get your items there.
+
+		// Third Page
+		.row.available-locations-container.full-width
+			.col-md-12
+				.row.coming-soon-container
+					.col-md-6.col-md-offset-3.centered-content
+						p.wt-text.font-light.font-lg
+							Will Begin Serving 
+							br
+							New York 
+							br
+							To 
+							br
+							Lagos
+
+		// Fourth page
+		#how-it-works.row.pg.full-width.hiw
+			.col-md-12
+				.row
+					.heading-container.col-md-10.col-md-offset-1.centered-content
+						p.font-reg.font-lg.pg-heading How It Works
+				.row
+					.col-md-4.hiw-elmts.centered-content
+						span
+							img.hiw-img(src='/images/map.png')
+						p.font-light.font-md.pg-heading Choose your destination
+						p.font-light.font-x-sm.font-soft Let us know where and when you need to send your package.
+					.col-md-4.hiw-elmts.centered-content
+						span
+							img.hiw-img(src='/images/suitcase.png')
+						p.font-light.font-md.pg-heading Claim your space
+						p.font-light.font-x-sm.font-soft
+							Connect with a ShypMate traveller who is headed to your destination and reserve a comfortable space for your package in their luggage.
+					.col-md-4.hiw-elmts.centered-content
+						span
+							img.hiw-img(src='/images/paper-plane.png')
+						p.font-light.font-md.pg-heading Send your package
+						p.font-light.font-x-sm.font-soft
+							Get your package to your ShypMate and relax. We&apos;ll update you throughout the journey and let you know when your package arrives.
+
+		// Footer page
+		.row.footer-pg.full-width.cover-bg.centered-content
+			.col-md-12
+				.row
+					.col-md-8.col-md-offset-2
+						p.closing-stmt.font-light.font-x-lg.wt-text &quot;It&apos;s always shipping season!&quot;
+				footer.row
+
+		// - Subcribe Modal
+		#subscribeModal.modal.fade(tabindex='-1', role='dialog')
+			.modal-dialog.modal-lg
+				.container-fluid.modal-content.sub-modal-container
+					a(href='#')
+						span.font-lg(data-dismiss='modal') &times;
+					.row
+						.sub-modal-content.col-md-8.col-md-offset-2
+							input#modalInput.early-access-input.font-light.font-sm(placeholder='Enter email address')
+							button.early-access-btn.wt-text.font-light.font-sm(type='button') Get Early Access
+
