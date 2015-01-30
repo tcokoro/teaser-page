@@ -169,7 +169,7 @@ header {
 		}
 
 .scrolled-header {
-	background-color: white;
+	background-color: rgba(0,0,0,0.7);
 	color: black;
 	border-bottom: 2px solid rgb(230, 230, 230);
 	box-shadow: 0 0 12px 3px rgba(0,0,0,0.45);
@@ -326,21 +326,25 @@ header {
 
 .footer-pg {
 	position: relative;
-	background-image: url("images/passport2.png");
-	height: 400px;
+	/*background-color: rgb(242,242,242);*/
+	background-color: white;
+	height: 200px;
+	/*border-top: 1px solid rgb(204,204,204);*/
+	color:rgb(77,77,77);
 }
-	
-	.closing-stmt {
-		margin: 170px 0 0 0;
-	}
 
-	.footer-pg:before {
-		position: absolute;
-		content: "";
-		width: 100%;
-		height: 100%;
-		background-color: rgba(237, 157, 151, 0.3);
-	}
+.contact-us {
+	margin:33px 0 33px 0;
+}
+
+#footer-divider {
+	width: 100%;
+	height: 1px;
+	background-color: rgb(204,204,204);
+	margin-bottom: 33px;
+}
+
+
 
 /*---------------------------------------*\
 
