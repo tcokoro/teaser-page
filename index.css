@@ -326,12 +326,14 @@ header {
 
 .footer-pg {
 	position: relative;
-	/*background-color: rgb(242,242,242);*/
 	background-color: white;
-	height: 200px;
-	/*border-top: 1px solid rgb(204,204,204);*/
+	height: 220px;
 	color:rgb(77,77,77);
 }
+
+	.footer-pg.logo-container {
+		height: 20px;
+	}
 
 .contact-us {
 	margin:33px 0 33px 0;
