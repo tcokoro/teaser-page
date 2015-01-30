@@ -169,7 +169,7 @@ header {
 		}
 
 .scrolled-header {
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(255,255,255,0.95);
 	color: black;
 	border-bottom: 2px solid rgb(230, 230, 230);
 	box-shadow: 0 0 12px 3px rgba(0,0,0,0.45);
