@@ -162,9 +162,6 @@ header {
 		margin-top: 22px;
 	}
 		.logo-container img {
-			transform: rotate(-30deg);
-				-ms-transform: rotate(-30deg);
-				-webkit-transform: rotate(-30deg);
 			width: 50px;
 		}
 
