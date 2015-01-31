@@ -43,12 +43,11 @@ body {
 
 .font-x-lg {
 	font-size: 54px;
+	
 }
 
 .font-lg {
 	font-size: 30px;
-	line-height: 200%;
-
 }
 
 .font-md {
@@ -57,12 +56,10 @@ body {
 
 .font-sm {
 	font-size: 19px;
-	line-height: 145%;
 }
 
 .font-x-sm {
 	font-size: 14px;
-	line-height: 145%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -102,13 +99,6 @@ body {
 	color: rgb(219, 68, 55);
 }
 
-.blue-error {
-	max-width:780px;
-	margin: 20px auto;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
 /*---------------------------------------------*\
 
      Cover Page Styling
@@ -125,14 +115,14 @@ body {
 @media only screen and (max-width:1279px) {
 	/* medium sized screen, non retina */
 	.cover-pg {
-		background-image:url("/images/splash_photo_600.jpg");
+		background-image:url("images/splash_photo_600.jpg");
 	}
 }
 
 @media only screen and (min-width: 1280px) {
 	/* default */
 	.cover-pg {
-		background-image: url("/images/splash_photo_1280.jpg");
+		background-image: url("images/splash_photo_1280.jpg");
 	}
 }
 
@@ -281,7 +271,7 @@ header {
 
 	.general-info-content span {
 		display: inline-block;
-		max-width: 1000px;
+		max-width: 900px;
 	}
 
 /*----------------------------------------------*\
@@ -292,7 +282,7 @@ header {
 
 .available-locations-container {
 	position: relative;
-	background:url("/images/skyline1.png");
+	background:url("images/skyline1.png");
 	background-color: rgb(150, 40, 27);
 	height: 340px;
 }
@@ -353,6 +343,8 @@ header {
 	margin-bottom: 33px;
 }
 
+
+
 /*---------------------------------------*\
 
      Get Early Access Modal Styling
@@ -360,7 +352,7 @@ header {
 \*---------------------------------------*/
 
 .sub-modal-container {
-	height: 120px;
+	height: 100px;
 	text-align: center;
 }
 
