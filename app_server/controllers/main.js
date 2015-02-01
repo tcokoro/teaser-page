@@ -1,32 +1,33 @@
+var teaser = require('../no-commit/teaser_info');
 var Mailgun = require('mailgun-js');
-var api_key = 'key-93363c6d8b608d0bca9a5369084e2f13';
-var domain = 'shypmate.com';
-var from_who = 'info@shypmate.com';
+var api_key = teaser.api_key;
+var domain = teaser.domain;
+var from_who = teaser.from_who;
+var list_name = teaser.list_name;
+var email_html = teaser.get_teaser_html();
+var email_text = teaser.teaser_text;
+var teaser_subject = teaser.teaser_subject;
 
-module.exports.submit = function(req, res){
+function sendWelcomeMessage(email){
 	var mailgun = new Mailgun({apiKey:api_key, domain:domain});	
 	var data  = {
 		from:from_who, 
-		to:req.params.mail,
-		subject: "Hello from Shypmate", 
-		html: "Hello, thank you for your interests in shypmate. We promise never to spam you but we" +
-			"will definitely let you know when we officially launch"
+		to:email,
+		subject: teaser_subject, 
+		html: email_html,
+		text: email_text
 	};
 
 	mailgun.messages().send(data, function(err, body) {
-		//if there is an error, render the error page
 		if (err) {
-			res.render('error', {error: err});
 			console.log('got an error:',err);
 		} else {
-			res.render('submitted', {email:req.params.mail});
-			addToMailingList('awesome@shypmate.com', req.params.mail);
-			console.log(body);
+			addToMailingList(email,list_name);
 		}
 	});
 };
 
-function addToMailingList(listName, email) {
+function addToMailingList(email, list_name) {
 		var mailgun = new Mailgun({apiKey: api_key, domain: domain});
     var members = [
       {
@@ -34,20 +35,30 @@ function addToMailingList(listName, email) {
       }
     ];
 
-    mailgun.lists(listName).members().add({ members: members, subscribed: true }, function (err, body) {
-      console.log(body);
+    mailgun.lists(list_name).members().add({ members: members, subscribed: true }, function (err, body) {
       if (err) {
-						return "Error - check console.";
+				console.log("Error - check console.");
+				console.log(err);
       }
       else {
-				return "Added to mailing list";
+				console.log(email, "Added to mailing list");
       }
     });
 }
 
 /* GET home page */
 module.exports.index = function(req, res){
-    res.render('index', {title:'Shypmate'});
+	res.render('index', {title:'Shypmate'});
 };
 
+/* send teaser email */
+module.exports.submit = function(req, res){
+	email = req.params.mail;
+	sendWelcomeMessage(email);	
+	sendJsonResponse(res, 200, {});
+}
 
+function sendJsonResponse(res, status, content) {
+  res.status(200);
+  res.json(content);
+}

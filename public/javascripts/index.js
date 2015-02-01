@@ -28,9 +28,15 @@ $(document).ready(function(){
 		$(buttonId).click(function() {
 			var input = $(inputId);
 				if (input.val()) {
-					earlySubscriber(input.val());
+					var valid = earlySubscriber(input.val());
+					if (!valid) {
+						$(infoId).text("Sorry mate, you need a valid email.");
+						$(infoId).removeClass('hidden');
+						input.focus();
+						return;
+					}
 					$(infoId).addClass('hidden');
-					input.val("Thanks for signing up!");
+					input.val("Thanks for signing up mate!");
 					disablePageButtonsAndInputs();
 				} else {
 					if (inputId === '#modalInput') {
@@ -50,13 +56,19 @@ $(document).ready(function(){
 	}
 
 	function earlySubscriber(email) {
-		console.log(email);
+		if (!isEmail(email)) {
+			return false;	
+		}
+
 		$.get('/mail/'+email, function(data) {
-			// on success
-			console.log(data);
-		}).fail(function(data) {
-			console.log(data)
 		});
+
+		return true;
+	}
+
+	function isEmail(email) {
+		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		return regex.test(email);
 	}
 
 });
