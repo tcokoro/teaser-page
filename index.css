@@ -332,6 +332,11 @@ header {
 		height: 20px;
 	}
 
+.social-icon img {
+	opacity: 0.5;
+	margin-right: 50px;
+}
+
 .contact-us {
 	margin:33px 0 33px 0;
 }
