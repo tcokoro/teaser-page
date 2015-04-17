@@ -22,7 +22,7 @@ $(document).ready(function() {
  */
 
 	bindSubmitButtonClicks('#modal-subscribe-button','#modalInput','#modal-subscribe-info');
-	bindSubmitButtonClicks('#subscribe-button', '#mail', '#subscribe-info');
+	//bindSubmitButtonClicks('#subscribe-button', '#mail', '#subscribe-info');
 
 	function bindSubmitButtonClicks(buttonId,inputId,infoId) {
 		$(buttonId).click(function() {
