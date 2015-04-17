@@ -20,9 +20,9 @@ block content
 						span.font-lg.font-light.wt-text	Ship at a bargain through your network
 					.row.early-access-input-container
 						.col-xs-12.col-sm-10.col-md-10.col-sm-offset-1.col-md-offset-1
-							input.early-access-input.font-sm.font-light(id="mail" placeholder='Enter email address')
-							button#subscribe-button.early-access-btn.wt-text.font-sm.font-light(type='button') Get Early Access
-							p#subscribe-info.bg-primary.blue-error.font-lg.font-light.wt-text.hidden Oops, it looks like you forgot to enter your email address
+
+						button#subscribe-button.early-access-btn.wt-text.font-x-sm.font-light(href='', data-toggle='modal', data-target='#subscribeModal') Get Early Access
+						button.watch-video-btn.wt-text.font-x-sm.font-light(href='', data-toggle='modal', data-target='#videoModal') Watch The Video
 
 		// Second Page
 		.row.general-info-pg.pg.full-width
@@ -109,4 +109,14 @@ block content
 							input#modalInput.early-access-input.font-light.font-sm(placeholder='Enter email address')
 							button#modal-subscribe-button.early-access-btn.wt-text.font-light.font-sm(type='button') Get Early Access
 							p#modal-subscribe-info.bg-primary.blue-error.font-lg.font-light.wt-text.hidden Oops, it looks like you forgot to enter your email address
+
+		// - Video Modal
+		#videoModal.modal.fade(tabindex='-1', role='dialog')
+			.modal-dialog.modal-lg
+				.modal-content
+					video(width="900" height="600" autobuffer controls)
+						source(src="/videos/teaser_vid.mp4" type="video/mp4")
+						| Your browser does not support the video tag.
+								
+
 
