@@ -245,6 +245,12 @@ header {
 		height: 65px;
 	}
 
+	.submit-modal-button {
+		margin-left: 20px;
+		width: 160px !important;
+		height: 60px !important;
+	}
+
 	.watch-video-btn {
 		width: 230px;
 		height: 65px;
@@ -420,7 +426,6 @@ header {
 	.sub-modal-container span:hover {
 		color: rgb(153, 153, 153);
 	};
-
 
 /*---------------------------------------*\
 

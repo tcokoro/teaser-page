@@ -100,14 +100,14 @@ block content
 
 		// - Subcribe Modal
 		#subscribeModal.modal.fade(tabindex='-1', role='dialog')
-			.modal-dialog.modal-lg
+			.modal-dialog.modal-md
 				.container-fluid.modal-content.sub-modal-container
 					a(href='#')
 						span.font-lg(data-dismiss='modal') &times;
 					.row
-						.sub-modal-content.col-md-8.col-md-offset-2
+						.sub-modal-content.col-md-10.col-md-offset-1
 							input#modalInput.early-access-input.font-light.font-sm(placeholder='Enter email address')
-							button#modal-subscribe-button.early-access-btn.wt-text.font-light.font-sm(type='button') Get Early Access
+							button#modal-subscribe-button.submit-modal-button.early-access-btn.wt-text.font-light.font-sm(type='button') Submit
 							p#modal-subscribe-info.bg-primary.blue-error.font-lg.font-light.wt-text.hidden Oops, it looks like you forgot to enter your email address
 
 		// - Video Modal
