@@ -108,15 +108,15 @@ block content
 						.sub-modal-content.col-md-10.col-md-offset-1
 							input#modalInput.early-access-input.font-light.font-sm(placeholder='Enter email address')
 							button#modal-subscribe-button.submit-modal-button.early-access-btn.wt-text.font-light.font-sm(type='button') Submit
-							p#modal-subscribe-info.bg-primary.blue-error.font-lg.font-light.wt-text.hidden Oops, it looks like you forgot to enter your email address
+							p#modal-subscribe-info.font-sm.font-light.pg-heading.hidden Please enter your email address &#42;
 
 		// - Video Modal
-		//- #videoModal.modal.fade(tabindex='-1', role='dialog')
-		//- 	.modal-dialog.modal-lg
-		//- 		.modal-content
-		//- 			video(width="900" height="600" autobuffer controls)
-		//- 				source(src="/videos/teaser_vid.mp4" type="video/mp4")
-		//- 				| Your browser does not support the video tag.
-								
+		#videoModal.modal.fade(tabindex='-1', role='dialog')
+			.modal-dialog.modal-lg
+				.modal-content
+					video(width="900" height="600" autobuffer controls)
+						source(src="/videos/teaser_vid.mp4" type="video/mp4")
+						| Your browser does not support our video format.
+						
 
 
