@@ -239,7 +239,7 @@ header {
 	position: relative;
 	top: 200px;
 }
-	
+
 	.early-access-btn {
 		width: 230px;
 		height: 65px;
@@ -403,7 +403,7 @@ header {
 }
 
 	.sub-modal-content {
-		margin-top: 25px;
+		margin-top: 15px;
 	}
 
 	@media only screen and (max-width: 560px) {
