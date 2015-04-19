@@ -5,7 +5,7 @@ $(document).ready(function() {
 		if ($(window).scrollTop() < 20 ) {
 			$("header").removeClass('scrolled-header');
 			$("#subscribeModalMenu img").attr("src", "images/early_access_menu_wt.png");
-		} else {	
+		} else {
 			$("header").addClass('scrolled-header');
 			$("#subscribeModalMenu img").attr("src", "images/early_access_menu_blk.png");
 		}
@@ -14,6 +14,13 @@ $(document).ready(function() {
 
 	$("#subscribeModal").on('shown.bs.modal', function() {
 		$("#modalInput").focus();
+	});
+
+	// Make sure info is hidden when modal is closed
+	// Clear text
+	$("#subscribeModal").on('hidden.bs.modal', function() {
+		$("#modal-subscribe-info").addClass('hidden');
+		$("#modalInput")[0].value = "";
 	});
 
 
@@ -30,15 +37,13 @@ $(document).ready(function() {
 				if (input.val()) {
 					earlySubscriber(input.val(), input, infoId);
 				} else {
-					if (inputId === '#modalInput') {
-						$($("div.container-fluid.modal-content.sub-modal-container")[0]).css('height',190);
-					}
+					$(infoId).text("Please enter your email address *");
 					$(infoId).removeClass('hidden');
 				}
-		});	
+		});
 	}
 
-	
+
 
 	function disablePageButtonsAndInputs() {
 		$("#subscribeModalBtn").prop('disabled', true);
@@ -50,20 +55,20 @@ $(document).ready(function() {
 
 	function earlySubscriber(email, input, infoId) {
 		if (!isEmail(email)) {
-			$(infoId).text("Sorry mate, you need a valid email.");
+			$(infoId).text("Sorry mate, you need a valid email *");
 			$(infoId).removeClass('hidden');
 			input.focus();
 			return;
 		}
 
 		$.get('/mail/'+email, function(data) {
-			earlySubscriberCallback(data['msg'], input, infoId);	
+			earlySubscriberCallback(data['msg'], infoId);
 		});
 	}
 
-	function earlySubscriberCallback(output, input, infoId) {
-		$(infoId).addClass('hidden');
-		input.val(output);
+	function earlySubscriberCallback(output,infoId) {
+		$(infoId).removeClass("pg-heading hidden");
+		$(infoId).text(output);
 		disablePageButtonsAndInputs();
 	}
 
