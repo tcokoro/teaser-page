@@ -153,7 +153,7 @@ body {
 	}
 
 .early-access-btn {
-	margin: 10px 30px 0 0;
+	margin: 0 0 10px 0;
 	background-color: rgb(219, 68, 55);
 	border: 0;
 	border-radius: 5px;
@@ -161,7 +161,6 @@ body {
 }
 
 .watch-video-btn {
-	margin: 10px 0 0 0;
 	background-color: rgb(123, 161, 191);
 	border: 0;
 	border-radius: 5px;
