@@ -3,6 +3,12 @@
 	Entire page Styling
 
 \*----------------------------------------*/
+.video-modal-container {
+	position: fixed;
+	top: 50%;
+	transform: translateY;
+	-webkit-transform: translateY(-50%);
+}
 
 html, body {
 	height: 100%;
@@ -434,6 +440,10 @@ header {
 
 \*---------------------------------------*/
 
+<<<<<<< HEAD
 .video-modal-container {
 	text-align: center;
 }
+=======
+
+>>>>>>> fce3def9b5c5bda78efd85f6c8439db8666cc6bd

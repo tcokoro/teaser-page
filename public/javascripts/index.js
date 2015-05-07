@@ -29,7 +29,6 @@ $(document).ready(function() {
  */
 
 	bindSubmitButtonClicks('#modal-subscribe-button','#modalInput','#modal-subscribe-info');
-	//bindSubmitButtonClicks('#subscribe-button', '#mail', '#subscribe-info');
 
 	function bindSubmitButtonClicks(buttonId,inputId,infoId) {
 		$(buttonId).click(function() {
@@ -41,16 +40,6 @@ $(document).ready(function() {
 					$(infoId).removeClass('hidden');
 				}
 		});
-	}
-
-
-
-	function disablePageButtonsAndInputs() {
-		$("#subscribeModalBtn").prop('disabled', true);
-		$("#modal-subscribe-button").prop('disabled', true);
-		$("#subscribe-button").prop('disabled', true);
-		$("#mail").prop('disabled', true);
-		$("#modalInput").prop('disabled', true);
 	}
 
 	function earlySubscriber(email, input, infoId) {
@@ -69,7 +58,9 @@ $(document).ready(function() {
 	function earlySubscriberCallback(output,infoId) {
 		$(infoId).removeClass("pg-heading hidden");
 		$(infoId).text(output);
-		disablePageButtonsAndInputs();
+		setTimeout(function() {
+			$("#subscribeModalBtn").click();
+		}, 1000);
 	}
 
 	function isEmail(email) {
