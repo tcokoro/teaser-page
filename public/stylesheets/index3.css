@@ -167,6 +167,13 @@ body {
 	opacity: 0.8;
 }
 
+@media only screen and (max-width: 1126px) and (min-width: 992px) {
+	/* Early Access & Watch Video Buttons */
+	button.early-access-btn,  button.watch-video-btn {
+		width: 170px;
+	}
+}
+
 header {
 	position: fixed;
 	height: 84px;
@@ -417,16 +424,21 @@ header {
 			width: 90%;
 		}
 
+		.submit-modal-button {
+			margin-top:10px;
+		}
+
 		.sub-modal-container {
-			height: 150px;
+			height: 170px;
 		}
 	}
 
-.sub-modal-container span{
+.sub-modal-container span {
 	position: absolute;
 	color: rgb(204, 204, 204);
 	left: 95%;
 	top: 10%;
+	z-index: 1000;
 }
 
 	.sub-modal-container span:hover {
@@ -439,10 +451,6 @@ header {
 
 \*---------------------------------------*/
 
-<<<<<<< HEAD
 .video-modal-container {
 	text-align: center;
 }
-=======
-
->>>>>>> fce3def9b5c5bda78efd85f6c8439db8666cc6bd
