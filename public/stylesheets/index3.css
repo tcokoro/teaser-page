@@ -19,6 +19,11 @@ body {
 	font: normal 100% 'Roboto', sans-serif;
 }
 
+.trademark {
+	position: relative;
+	top: -40px;
+	font-size: 4px;
+}
 
 .pg {
 	height: 750px;
