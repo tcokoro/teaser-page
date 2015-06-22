@@ -73,6 +73,11 @@ module.exports.submit = function(req, res) {
 	isNewUser(email, res);
 }
 
+/* GET FAQ page */
+module.exports.faq = function(req, res) {
+	res.render('faq');
+}
+
 function sendJsonResponse(res, status, content) {
   res.status(200);
   res.json(content);

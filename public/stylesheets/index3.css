@@ -459,3 +459,68 @@ header {
 .video-modal-container {
 	text-align: center;
 }
+
+/*----------------------------------------*\
+	
+	FAQ Styling
+
+\*----------------------------------------*/
+.faq {
+	padding: 0;
+}
+
+	.faq .font-sm {
+		font-size: 19px;
+	}
+
+	.faq .font-x-sm {
+		font-size: 14px;
+	}
+
+.faq-header {
+	height: 50px;
+	background-color: #34495E;
+	position: fixed;
+	z-index: 10;
+	border-bottom: 3px solid rgb(34, 49, 63);
+	box-shadow: 0 0 6px 1px rgba(0,0,0,0.45);
+	/*color: rgb(230, 230, 230);*/
+}
+
+	.faq-header .early-access-btn {	
+		width: 150px;
+		height: 40px;
+		background: transparent;
+		border: 2px solid white;
+		margin-top: 5px
+	}
+
+	.faq-header .logo-container {
+		/*margin-left: 7%;*/
+		margin-top: 6px;
+		/*width: 60px;*/
+	}
+
+	.faq-header .logo-container img {
+		width: 40px;
+	}
+
+.faq-header__btn {
+	/*margin-left: 20%;*/
+	/*width: 200px;*/
+}
+
+.faq-items {
+	position: relative;
+	top: 80px;
+	padding-left: 18%;
+	padding-right: 18%;
+}
+
+.faq-item {
+	color:  rgb(219, 68, 55);
+}
+
+.faq .footer-pg {
+	top: 100px;
+}

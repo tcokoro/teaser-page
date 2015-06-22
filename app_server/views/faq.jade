@@ -1,0 +1,70 @@
+extends layout
+
+block content
+	.container-fluid.faq.full-width
+		.row.faq-header.full-width
+			.col-md-12
+				.row.full-width
+					a.logo-container.col-md-1.col-md-offset-1(href="/")
+						img(src='/images/logo_icon.png')
+					.faq-header__btn.col-md-3.col-md-offset-7
+						button#subscribeModalBtn.early-access-btn.wt-text.font-x-sm.font-light(type='button', data-toggle='modal', data-target='#subscribeModal')	Get Early Access			
+		
+		.row
+			.faq-items
+			
+				h2.faq-item Frequently Asked Questions (FAQ)
+				br
+				br
+				p.faq-item.font-sm.font-reg What is Shypmate? 
+				p.font-x-sm.font-light.font-soft Shypmate is a peer to peer global shipping platform that allow senders to find a traveler who is headed to the same destination that they need to send their packages to. Send your items without the standard cost of shipping globally. As a traveler, you can earn extra bucks by simply putting your empty luggage space to good use. 
+				br
+				br
+				p.faq-item.font-sm.font-reg How does it work? 
+				p.font-x-sm.font-light.font-soft Shypmate works in three easy to follow steps:
+				ol.font-x-sm.font-light.font-soft
+					li Senders choose where and when they need their package sent. Travelers post when and where they are traveling. 
+					li Connect with a Shypmate traveler who is headed to your destination and reserve a comfortable space for your package in their luggage. 
+					li Get your package to your Shypmate and relax. We'll update you throughout the journey and let you know when your package arrives. 
+				br
+				br
+				p.faq-item.font-sm.font-reg How do you ensure that packages are safe to carry? 
+				p.font-x-sm.font-light.font-soft Both the sender and the traveler must adhere to the following guidelines. The sender is required to provide a description of the items s(he) is sending. When the traveler meets the sender for pickup, the traveler has the rights to and MUST verify the legality of the package before accepting them. The verification process must be consistent with the procedures that the traveler and sender agreed to uphold in the terms and conditions of Shypmate.
+				br
+				br
+				p.faq-item.font-sm.font-reg What measures does Shypmate have in place to prevent theft from Travelers? 
+				p.font-x-sm.font-light.font-soft To ensure that all travelers are held to the highest standard, before travelers are permitted to carry packages for senders, they are required to provide their bank account information in their name. This serves as collateral against the sender's package. 
+				br
+				br
+				p.faq-item.font-sm.font-reg How will the recipient receive the package at the destination?
+				p.font-x-sm.font-light.font-soft Shypmate recommends that the recipient meet the traveler at the destination airport to pickup the package. However, Travelers will be able to indicate whether they are willing to deliver the pacakge or meet at an arranged location to hand off the package to the recipient. 
+				br
+				br
+				p.faq-item.font-sm.font-reg Does Shypmate apply fees for using the platform? 
+				p.font-soft.font-x-sm.font-light You can sign up for the Shypmate platform through the website free of charge. Shypmate does not apply any service fee to the senders. We ONLY apply a 12% service fee to the payment that is released to the traveler. 
+				br
+				br
+				p.faq-item.font-sm.font-reg What happens in the scenario of a lost or damaged package? 
+				p.font-soft.font-x-sm.font-light Shypmate will offer an insurance policy to cover loss or damaged packages per below: ...
+				br
+				br
+				br
+				br
+				br
+
+		// Footer page
+		.row.footer-pg.full-width.cover-bg.centered-content
+			.col-md-12
+				.row
+					.col-md-10.col-md-offset-1
+						#footer-divider
+
+				.row.social
+					a(href='https://twitter.com/Shypmate' target='blank')
+						img(class='social-icon', src='images/twttr_icon.svg')
+					a(href='https://www.facebook.com/pages/Shypmate/637250649735355?ref=bookmarks' target='blank')
+						img(class='social-icon', src='images/fb_icon.svg')
+				.row.font-bold.font-x-sm#email
+					|info@shypmate.com
+				.logo-container
+					img(src='images/logo_icon.png')
