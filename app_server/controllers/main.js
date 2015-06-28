@@ -75,7 +75,7 @@ module.exports.submit = function(req, res) {
 
 /* GET FAQ page */
 module.exports.faq = function(req, res) {
-	res.render('faq');
+	res.render('faq', {title: 'Shypmate'});
 }
 
 function sendJsonResponse(res, status, content) {
